@@ -1,3 +1,9 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0e1311">
 <meta name="robots" content="noindex, nofollow">
 <title>Татьяна Хлебко — SMM и контент: съёмка, монтаж, визуал</title>
 
@@ -91,6 +97,8 @@
   }
 
   * { box-sizing: border-box; }
+
+  html { -webkit-text-size-adjust: 100%; }
 
   body {
     margin: 0;
@@ -268,6 +276,8 @@
   /* ---------- sections ---------- */
 
   .section { padding-block: clamp(2.25rem, 5vw, 3.75rem); }
+
+  section[id] { scroll-margin-top: 4.25rem; }
 
   .rule {
     display: flex;
@@ -560,12 +570,63 @@
     .texts-grid { grid-template-columns: minmax(0, 1fr); }
   }
 
+  @media (max-width: 620px) {
+    :root {
+      --step: 1.06rem;
+      --gutter: 1.25rem;
+    }
+
+    body { line-height: 1.58; }
+
+    .rule { gap: .7rem; padding-top: .9rem; }
+    .rule h2 { font-size: 1.5rem; }
+    .rule-note { font-size: .85rem; margin-top: .35rem; }
+
+    .hero { padding-block: 2rem 1.75rem; }
+    .hero h1 { font-size: 2.15rem; }
+    .hero-sub { font-size: 1.22rem; max-width: none; }
+    .hero-lede { font-size: 1.06rem; max-width: none; }
+    .tag { font-size: .86rem; padding: .48rem .8rem; }
+
+    .label { font-size: .76rem; letter-spacing: .12em; }
+    .section-intro, .story { font-size: 1.06rem; }
+    .story { gap: .95rem; }
+
+    .clip figcaption { font-size: .92rem; }
+    .did h3 { font-size: 1rem; }
+    .did p, .skills li, .fit-have, .fit-need, .brand-cell p { font-size: .98rem; }
+    .fit-need strong { font-size: 1rem; }
+    .fit-row > div { padding: .95rem 1rem; }
+
+    .step { grid-template-columns: 2.6rem minmax(0, 1fr); gap: .75rem; }
+    .step h3 { font-size: 1.05rem; }
+    .step p { font-size: .98rem; }
+
+    .tl-row { padding: 1.15rem 0; }
+    .tl-what h3 { font-size: 1.08rem; }
+    .tl-what > p, .tl-what li { font-size: .98rem; }
+    .tl-what h4 { font-size: .78rem; }
+    .tl-when { font-size: .85rem; }
+
+    .links a, .contact-cell a, .contact-cell span { font-size: 1.02rem; }
+    .links a { padding-block: .3rem; }
+    .topbar-inner { padding-block: .55rem; }
+    .topbar-links { gap: 1.15rem; font-size: .92rem; }
+    .topbar-links a { padding-block: .3rem; }
+
+    .shot figcaption { font-size: .9rem; }
+    footer { font-size: .9rem; }
+  }
+
   @media print {
     .topbar, .reveal { position: static; opacity: 1; transform: none; }
     .card, .fit-row > div, .clip { break-inside: avoid; }
     body { background: #fff; color: #000; }
   }
 </style>
+</head>
+<body>
+
 
 <header class="topbar">
   <div class="wrap topbar-inner">
@@ -1125,3 +1186,6 @@
     });
   })();
 </script>
+
+</body>
+</html>

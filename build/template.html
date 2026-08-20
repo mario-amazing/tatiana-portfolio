@@ -1,0 +1,1074 @@
+<meta name="robots" content="noindex, nofollow">
+<title>Татьяна Хлебко — SMM и контент: съёмка, монтаж, визуал</title>
+
+<style>
+  @font-face {
+    font-family: "Unbounded";
+    font-weight: 200 900;
+    font-style: normal;
+    font-display: swap;
+    src: url(data:font/woff2;base64,__FONT_UNB_CY__) format("woff2");
+    unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+  }
+  @font-face {
+    font-family: "Unbounded";
+    font-weight: 200 900;
+    font-style: normal;
+    font-display: swap;
+    src: url(data:font/woff2;base64,__FONT_UNB_LAT__) format("woff2");
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+  @font-face {
+    font-family: "Nunito";
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+    src: url(data:font/woff2;base64,__FONT_NUN_REG__) format("woff2");
+  }
+  @font-face {
+    font-family: "Nunito";
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+    src: url(data:font/woff2;base64,__FONT_NUN_BOLD__) format("woff2");
+  }
+
+  :root {
+    --paper: #eeeee8;
+    --card: #f8f8f5;
+    --ink: #141a16;
+    --muted: #5c665f;
+    --line: #d5d8cf;
+    --line-soft: #e2e4dc;
+    --berry: #a82a51;
+    --moss: #33574a;
+    --shadow: 0 1px 2px rgba(20, 26, 22, .05), 0 12px 28px -18px rgba(20, 26, 22, .35);
+
+    --display: "Unbounded", "Trebuchet MS", sans-serif;
+    --body: "Nunito", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+
+    --step: clamp(1rem, .93rem + .32vw, 1.125rem);
+    --gutter: clamp(1.15rem, .6rem + 2.6vw, 3rem);
+    --max: 1120px;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --paper: #0e1311;
+      --card: #161d19;
+      --ink: #e7eae4;
+      --muted: #94a09a;
+      --line: #26302a;
+      --line-soft: #1d2521;
+      --berry: #ff7d9e;
+      --moss: #86b7a1;
+      --shadow: 0 1px 2px rgba(0, 0, 0, .4), 0 16px 32px -20px rgba(0, 0, 0, .8);
+    }
+  }
+
+  :root[data-theme="dark"] {
+    --paper: #0e1311;
+    --card: #161d19;
+    --ink: #e7eae4;
+    --muted: #94a09a;
+    --line: #26302a;
+    --line-soft: #1d2521;
+    --berry: #ff7d9e;
+    --moss: #86b7a1;
+    --shadow: 0 1px 2px rgba(0, 0, 0, .4), 0 16px 32px -20px rgba(0, 0, 0, .8);
+  }
+
+  :root[data-theme="light"] {
+    --paper: #eeeee8;
+    --card: #f8f8f5;
+    --ink: #141a16;
+    --muted: #5c665f;
+    --line: #d5d8cf;
+    --line-soft: #e2e4dc;
+    --berry: #a82a51;
+    --moss: #33574a;
+    --shadow: 0 1px 2px rgba(20, 26, 22, .05), 0 12px 28px -18px rgba(20, 26, 22, .35);
+  }
+
+  * { box-sizing: border-box; }
+
+  html { -webkit-text-size-adjust: 100%; }
+
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--body);
+    font-size: var(--step);
+    line-height: 1.62;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .wrap {
+    max-width: var(--max);
+    margin: 0 auto;
+    padding-inline: var(--gutter);
+  }
+
+  a { color: inherit; }
+
+  a:focus-visible,
+  video:focus-visible {
+    outline: 2px solid var(--berry);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+
+  h1, h2, h3, .step-index {
+    font-family: var(--display);
+    font-weight: 500;
+    letter-spacing: -.02em;
+    text-wrap: balance;
+    margin: 0;
+  }
+
+  p { margin: 0; }
+
+  .label {
+    font-size: .72rem;
+    font-weight: 700;
+    letter-spacing: .16em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  /* ---------- topbar ---------- */
+
+  .topbar {
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    background: color-mix(in srgb, var(--paper) 88%, transparent);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--line);
+  }
+
+  .topbar-inner {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: .5rem 1.25rem;
+    padding-block: .7rem;
+  }
+
+  .topbar-name {
+    font-family: var(--display);
+    font-weight: 600;
+    font-size: .95rem;
+    letter-spacing: -.01em;
+  }
+
+  .topbar-role { font-size: .85rem; color: var(--muted); }
+  .topbar-links { margin-left: auto; display: flex; gap: 1rem; font-size: .85rem; }
+  .topbar-links a { text-decoration: none; border-bottom: 1px solid var(--line); padding-bottom: 1px; }
+  .topbar-links a:hover { border-color: var(--berry); color: var(--berry); }
+
+  /* ---------- hero ---------- */
+
+  .hero { padding-block: clamp(2.5rem, 6vw, 4.5rem) clamp(2rem, 4vw, 3rem); }
+
+  .hero-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.35fr) minmax(0, .65fr);
+    gap: clamp(1.75rem, 4vw, 3.5rem);
+    align-items: end;
+  }
+
+  .hero h1 {
+    font-size: clamp(1.95rem, 1.15rem + 3.1vw, 3.35rem);
+    line-height: 1.06;
+    font-weight: 400;
+    margin-bottom: .35rem;
+  }
+
+  .hero h1 em {
+    font-style: normal;
+    font-weight: 700;
+    color: var(--berry);
+  }
+
+  .hero-sub {
+    font-family: var(--display);
+    font-weight: 300;
+    font-size: clamp(1.1rem, .9rem + 1vw, 1.5rem);
+    line-height: 1.26;
+    letter-spacing: -.015em;
+    color: var(--moss);
+    margin-bottom: 1.45rem;
+    max-width: 30ch;
+  }
+
+  .hero-lede {
+    max-width: 46ch;
+    color: var(--muted);
+    font-size: clamp(1.02rem, .95rem + .35vw, 1.15rem);
+  }
+
+  .hero-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .5rem;
+    margin-top: 1.6rem;
+  }
+
+  .tag {
+    font-size: .8rem;
+    line-height: 1.2;
+    padding: .42rem .7rem;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    color: var(--muted);
+    background: var(--card);
+  }
+
+  .tag.is-key {
+    border-color: var(--berry);
+    color: var(--berry);
+    font-weight: 700;
+  }
+
+  .frame {
+    position: relative;
+    aspect-ratio: 9 / 13;
+    border-radius: 3px;
+    overflow: hidden;
+    background: var(--card);
+  }
+
+  .frame img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+  .framed { position: relative; padding: 12px; }
+
+  .framed::before,
+  .framed::after {
+    content: "";
+    position: absolute;
+    width: 26px;
+    height: 26px;
+    border: 1.5px solid var(--moss);
+  }
+
+  .framed::before { top: 0; left: 0; border-right: 0; border-bottom: 0; }
+  .framed::after { bottom: 0; right: 0; border-left: 0; border-top: 0; }
+
+  .frame-caption {
+    margin-top: .7rem;
+    font-size: .74rem;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: var(--muted);
+    display: flex;
+    justify-content: space-between;
+    gap: .5rem;
+  }
+
+  /* ---------- sections ---------- */
+
+  .section { padding-block: clamp(2.25rem, 5vw, 3.75rem); }
+
+  section[id] { scroll-margin-top: 4.25rem; }
+
+  .rule {
+    display: flex;
+    align-items: baseline;
+    gap: 1rem;
+    padding-top: 1.1rem;
+    border-top: 1px solid var(--line);
+  }
+
+  .rule h2 {
+    font-size: clamp(1.3rem, 1.05rem + .9vw, 1.9rem);
+    font-weight: 500;
+  }
+
+  .rule .label { flex: 0 0 auto; padding-top: .2rem; }
+  .rule-note { margin-left: auto; font-size: .82rem; color: var(--muted); text-align: right; }
+
+  .section-intro {
+    margin-top: 1rem;
+    max-width: 62ch;
+    color: var(--muted);
+  }
+
+  /* ---------- story ---------- */
+
+  .story {
+    margin-top: 1.5rem;
+    display: grid;
+    gap: 1.1rem;
+    max-width: 64ch;
+    font-size: clamp(1.02rem, .96rem + .3vw, 1.14rem);
+  }
+
+  .story strong { color: var(--berry); font-weight: 700; }
+
+  /* ---------- clips ---------- */
+
+  .clip-group { margin-top: 2rem; }
+
+  .clip-group > h3 {
+    font-family: var(--body);
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    font-size: .76rem;
+    font-weight: 700;
+    color: var(--moss);
+    margin-bottom: .9rem;
+  }
+
+  .clips {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(172px, 1fr));
+    gap: clamp(.7rem, 1.4vw, 1.1rem);
+  }
+
+  .clip { margin: 0; }
+
+  .clip video {
+    width: 100%;
+    aspect-ratio: 9 / 16;
+    object-fit: cover;
+    display: block;
+    border-radius: 4px;
+    background: #0b0f0d;
+    box-shadow: var(--shadow);
+  }
+
+  .clip figcaption {
+    margin-top: .55rem;
+    font-size: .85rem;
+    line-height: 1.4;
+    color: var(--muted);
+  }
+
+  /* ---------- still cards ---------- */
+
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(196px, 1fr));
+    gap: clamp(.7rem, 1.4vw, 1.1rem);
+    margin-top: 1.75rem;
+    max-width: 760px;
+  }
+
+  .card {
+    display: block;
+    text-decoration: none;
+    border-radius: 4px;
+    overflow: hidden;
+    background: var(--card);
+    box-shadow: var(--shadow);
+    transition: transform .28s ease, box-shadow .28s ease;
+  }
+
+  .card-media { position: relative; aspect-ratio: 9 / 16; overflow: hidden; }
+  .card-media img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+  .card-kind {
+    position: absolute;
+    top: .6rem;
+    left: .6rem;
+    z-index: 2;
+    font-size: .64rem;
+    font-weight: 700;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    padding: .22rem .45rem;
+    border-radius: 2px;
+    background: rgba(255, 255, 255, .92);
+    color: #141a16;
+  }
+
+  .card-body { padding: .7rem .8rem .85rem; }
+  .card-body p { font-size: .85rem; line-height: 1.42; }
+
+  .card:hover { transform: translateY(-3px); }
+  .card:hover .card-body p { color: var(--berry); }
+
+  /* ---------- did / fit ---------- */
+
+  .did {
+    margin-top: 1.9rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 1.4rem 2rem;
+  }
+
+  .did h3 { font-size: .95rem; font-weight: 700; font-family: var(--body); letter-spacing: 0; margin-bottom: .35rem; }
+  .did p { font-size: .92rem; color: var(--muted); }
+
+  .fit { margin-top: 1.75rem; display: grid; gap: 1px; background: var(--line); border: 1px solid var(--line); border-radius: 4px; overflow: hidden; }
+
+  .fit-row {
+    display: grid;
+    grid-template-columns: minmax(0, .85fr) minmax(0, 1.15fr);
+    gap: 1px;
+    background: var(--line);
+  }
+
+  .fit-row > div { background: var(--card); padding: 1rem 1.1rem; }
+  .fit-need { color: var(--muted); }
+  .fit-need strong { display: block; color: var(--ink); font-size: .95rem; margin-bottom: .15rem; }
+  .fit-have { font-size: .97rem; }
+
+  /* ---------- steps ---------- */
+
+  .steps { margin-top: 1.75rem; display: grid; gap: 0; }
+
+  .step {
+    display: grid;
+    grid-template-columns: 3.4rem minmax(0, 1fr);
+    gap: 1rem;
+    padding: 1.05rem 0;
+    border-top: 1px solid var(--line-soft);
+    align-items: baseline;
+  }
+
+  .step:first-child { border-top: 0; }
+  .step-index { font-size: 1.05rem; color: var(--moss); font-variant-numeric: tabular-nums; font-weight: 600; }
+  .step h3 { font-size: 1rem; font-weight: 700; font-family: var(--body); letter-spacing: 0; margin-bottom: .2rem; }
+  .step p { font-size: .92rem; color: var(--muted); }
+
+  /* ---------- skills ---------- */
+
+  .skills { margin-top: 1.75rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.5rem 2rem; }
+  .skills h3 { font-size: .78rem; letter-spacing: .14em; text-transform: uppercase; color: var(--moss); font-family: var(--body); font-weight: 700; margin-bottom: .55rem; }
+  .skills ul { margin: 0; padding: 0; list-style: none; display: grid; gap: .38rem; }
+  .skills li { font-size: .93rem; padding-left: 1rem; position: relative; }
+  .skills li::before { content: ""; position: absolute; left: 0; top: .62em; width: 5px; height: 5px; border-radius: 50%; background: var(--berry); }
+
+  /* ---------- resume ---------- */
+
+  .timeline { margin-top: 1.75rem; }
+
+  .tl-row {
+    display: grid;
+    grid-template-columns: 10.5rem minmax(0, 1fr);
+    gap: 1rem 1.5rem;
+    padding: 1.3rem 0;
+    border-top: 1px solid var(--line-soft);
+  }
+
+  .tl-when { font-size: .8rem; letter-spacing: .06em; color: var(--muted); font-variant-numeric: tabular-nums; padding-top: .25rem; }
+  .tl-what h3 { font-size: 1.05rem; font-weight: 700; font-family: var(--body); letter-spacing: 0; }
+  .tl-where { font-size: .88rem; color: var(--moss); font-weight: 700; margin-bottom: .5rem; }
+  .tl-what > p { font-size: .93rem; color: var(--muted); }
+  .tl-what h4 {
+    font-size: .74rem;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: var(--muted);
+    font-weight: 700;
+    margin: .95rem 0 .35rem;
+  }
+  .tl-what ul { margin: .5rem 0 0; padding: 0; list-style: none; display: grid; gap: .32rem; }
+  .tl-what li { font-size: .92rem; color: var(--muted); padding-left: 1rem; position: relative; }
+  .tl-what li::before { content: "—"; position: absolute; left: 0; color: var(--line); }
+
+  /* ---------- contact ---------- */
+
+  .contact {
+    margin-top: 1.75rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    gap: 1px;
+    background: var(--line);
+    border: 1px solid var(--line);
+    border-radius: 4px;
+    overflow: hidden;
+  }
+
+  .contact-cell { background: var(--card); padding: 1.1rem 1.15rem 1.25rem; }
+  .contact-cell .label { display: block; margin-bottom: .35rem; }
+  .contact-cell a, .contact-cell span { font-size: 1rem; text-decoration: none; font-variant-numeric: tabular-nums; }
+  .contact-cell a { border-bottom: 1px solid var(--line); }
+  .contact-cell a:hover { color: var(--berry); border-color: var(--berry); }
+
+  footer { padding-block: 2.5rem 3.5rem; color: var(--muted); font-size: .82rem; }
+  footer .wrap { border-top: 1px solid var(--line); padding-top: 1.1rem; }
+
+  /* ---------- reveal ---------- */
+
+  .reveal { opacity: 0; transform: translateY(14px); transition: opacity .6s ease, transform .6s ease; }
+  .reveal.is-in { opacity: 1; transform: none; }
+
+  @media (prefers-reduced-motion: reduce) {
+    .reveal { opacity: 1; transform: none; transition: none; }
+    .card { transition: none; }
+  }
+
+  @media (max-width: 900px) {
+    .hero-grid { grid-template-columns: minmax(0, 1fr); align-items: start; }
+    .hero-portrait { max-width: 300px; }
+    .fit-row { grid-template-columns: minmax(0, 1fr); }
+    .tl-row { grid-template-columns: minmax(0, 1fr); }
+    .rule { flex-wrap: wrap; }
+    .rule-note { margin-left: 0; text-align: left; width: 100%; }
+  }
+
+  @media (max-width: 520px) {
+    .clips, .cards { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .topbar-links { margin-left: 0; }
+  }
+
+  /* ---------- texts / site shot ---------- */
+
+  .texts-grid {
+    margin-top: 1.75rem;
+    display: grid;
+    grid-template-columns: minmax(0, .82fr) minmax(0, 1.18fr);
+    gap: clamp(1.5rem, 3vw, 2.75rem);
+    align-items: start;
+  }
+
+  .shot { margin: 0; }
+
+  .shot img {
+    width: 100%;
+    display: block;
+    border-radius: 4px;
+    border: 1px solid var(--line);
+    box-shadow: var(--shadow);
+  }
+
+  .shot figcaption { margin-top: .6rem; font-size: .82rem; color: var(--muted); line-height: 1.45; }
+
+  .links { margin-top: 1.3rem; display: grid; gap: .6rem; }
+
+  .links a {
+    text-decoration: none;
+    font-size: .95rem;
+    border-bottom: 1px solid var(--line);
+    justify-self: start;
+  }
+
+  .links a:hover { color: var(--berry); border-color: var(--berry); }
+
+  .links-lead { font-size: .93rem; color: var(--muted); margin-bottom: .1rem; }
+
+  .personal {
+    margin-top: 1.5rem;
+    display: grid;
+    gap: 1rem;
+    max-width: 60ch;
+  }
+
+  .personal a { color: var(--berry); text-decoration: none; border-bottom: 1px solid color-mix(in srgb, var(--berry) 40%, transparent); }
+
+  @media (max-width: 900px) {
+    .texts-grid { grid-template-columns: minmax(0, 1fr); }
+  }
+
+  @media (max-width: 620px) {
+    :root {
+      --step: 1.06rem;
+      --gutter: 1.25rem;
+    }
+
+    body { line-height: 1.58; }
+
+    .rule { gap: .7rem; padding-top: .9rem; }
+    .rule h2 { font-size: 1.5rem; }
+    .rule-note { font-size: .85rem; margin-top: .35rem; }
+
+    .hero { padding-block: 2rem 1.75rem; }
+    .hero h1 { font-size: 2.15rem; }
+    .hero-sub { font-size: 1.22rem; max-width: none; }
+    .hero-lede { font-size: 1.06rem; max-width: none; }
+    .tag { font-size: .86rem; padding: .48rem .8rem; }
+
+    .label { font-size: .76rem; letter-spacing: .12em; }
+    .section-intro, .story { font-size: 1.06rem; }
+    .story { gap: .95rem; }
+
+    .clip figcaption { font-size: .92rem; }
+    .did h3 { font-size: 1rem; }
+    .did p, .skills li, .fit-have, .fit-need, .brand-cell p { font-size: .98rem; }
+    .fit-need strong { font-size: 1rem; }
+    .fit-row > div { padding: .95rem 1rem; }
+
+    .step { grid-template-columns: 2.6rem minmax(0, 1fr); gap: .75rem; }
+    .step h3 { font-size: 1.05rem; }
+    .step p { font-size: .98rem; }
+
+    .tl-row { padding: 1.15rem 0; }
+    .tl-what h3 { font-size: 1.08rem; }
+    .tl-what > p, .tl-what li { font-size: .98rem; }
+    .tl-what h4 { font-size: .78rem; }
+    .tl-when { font-size: .85rem; }
+
+    .links a, .contact-cell a, .contact-cell span { font-size: 1.02rem; }
+    .links a { padding-block: .3rem; }
+    .topbar-inner { padding-block: .55rem; }
+    .topbar-links { gap: 1.15rem; font-size: .92rem; }
+    .topbar-links a { padding-block: .3rem; }
+
+    .shot figcaption { font-size: .9rem; }
+    footer { font-size: .9rem; }
+  }
+
+  @media print {
+    .topbar, .reveal { position: static; opacity: 1; transform: none; }
+    .card, .fit-row > div, .clip { break-inside: avoid; }
+    body { background: #fff; color: #000; }
+  }
+</style>
+
+<header class="topbar">
+  <div class="wrap topbar-inner">
+    <span class="topbar-name">Татьяна Хлебко</span>
+    <span class="topbar-role">SMM · контент · Reels</span>
+    <nav class="topbar-links">
+      <a href="#work">Работы</a>
+      <a href="#resume">Резюме</a>
+      <a href="#contact">Связаться</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <p class="label" style="margin-bottom: 1.1rem;">Портфолио · SMM и контент-мейкер</p>
+        <h1>Снимаю, монтирую, <em>оформляю</em></h1>
+        <p class="hero-sub">6 лет — для себя, друзей, знакомых. Теперь хочу заниматься этим всерьёз</p>
+        <p class="hero-lede">
+          Снимаю и монтирую Reels, создаю продуктовый контент, пишу тексты и оформляю
+          посты. Ниже — примеры работ: студия массажа, кондитерские изделия,
+          изделия ручной работы и др.
+        </p>
+        <div class="hero-tags">
+          <span class="tag">Удалённо или в офисе</span>
+          <span class="tag is-key">Reels и TikTok</span>
+          <span class="tag is-key">Съёмка и монтаж</span>
+          <span class="tag is-key">Тексты</span>
+          <span class="tag">Минск · Батуми</span>
+        </div>
+      </div>
+      <div class="hero-portrait">
+        <div class="framed">
+          <div class="frame">
+            <img src="data:image/jpeg;base64,__IMG_PORTRAIT__" alt="Татьяна Хлебко">
+          </div>
+        </div>
+        <div class="frame-caption">
+          <span>Татьяна Хлебко</span>
+          <span>Батуми · Минск</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section wrap reveal">
+    <div class="rule">
+      <span class="label">01</span>
+      <h2>Как так вышло</h2>
+    </div>
+    <div class="story">
+      <p>
+        Шесть лет я делала контент для знакомых. Кто-то просил снять и смонтировать ролик,
+        кто-то — оформить аккаунт, написать текст или придумать, как красиво показать товар.
+        Я соглашалась, <strong>потому что мне это нравится</strong>: разложить идею на кадры,
+        снять, собрать на монтаже и увидеть готовое.
+      </p>
+      <p>
+        Так и набрались очень разные проекты: студия массажа, частные массажисты,
+        кондитерские изделия, доставка еды, изделия ручной работы. Всё это шло
+        параллельно основной работе — и всё это время я училась по ходу: снимать, монтировать,
+        писать тексты, собирать визуал.
+      </p>
+      <p>
+        Сейчас хочу перестать делать это между делом и <strong>развиваться в этом
+        направлении профессионально</strong> — как в основной работе, а не как в подработке.
+      </p>
+    </div>
+  </section>
+
+  <section class="section wrap reveal" id="work">
+    <div class="rule">
+      <span class="label">02</span>
+      <h2>Контент для студии массажа и массажистов</h2>
+      <p class="rule-note">Studio53 · 2019–2025 и частные мастера</p>
+    </div>
+    <p class="section-intro">
+      Самый долгий проект — студия ручного массажа Studio53: вела аккаунт с момента запуска,
+      писала тексты, снимала и монтировала ролики, готовила разные макеты, а также занималась
+      созданием текстов и фотоматериалов для сайта и чат-бота.
+    </p>
+    <div class="clips">
+      __CLIPS_MASSAGE__
+    </div>
+
+  </section>
+
+  <section class="section wrap reveal">
+    <div class="rule">
+      <span class="label">03</span>
+      <h2>Кондитерские изделия</h2>
+      <p class="rule-note">Моти и cookies · съёмка и монтаж</p>
+    </div>
+    <p class="section-intro">
+      Ролики для кондитерского проекта: предметная съёмка десертов, детали и подача,
+      сезонные подборки, оформление отзывов покупателей в отдельную рубрику.
+    </p>
+    <div class="clips">
+      __CLIPS_SWEETS__
+    </div>
+  </section>
+
+  <section class="section wrap reveal">
+    <div class="rule">
+      <span class="label">04</span>
+      <h2>Другие ролики</h2>
+      <p class="rule-note">Небольшие заказы по просьбе знакомых</p>
+    </div>
+    <p class="section-intro">
+      Неважно, какой продукт в кадре, — задача всегда одна: показать его вкусно
+      и с лучшей стороны.
+    </p>
+    <div class="clips">
+      __CLIPS_OTHER__
+    </div>
+  </section>
+
+  <section class="section wrap reveal" id="texts">
+    <div class="rule">
+      <span class="label">05</span>
+      <h2>Тексты: сайт и чат-бот</h2>
+      <p class="rule-note">s53.by · чат-бот</p>
+    </div>
+    <div class="texts-grid">
+      <figure class="shot">
+        <a href="https://s53.by/certificates" target="_blank" rel="noopener"><img src="data:image/jpeg;base64,__IMG_SITE__" alt="Раздел о подарочных сертификатах на сайте s53.by"></a>
+        <figcaption>Раздел о подарочных сертификатах на s53.by — текст, визуал, удобство. Нажмите, чтобы открыть страницу.</figcaption>
+      </figure>
+      <div>
+        <p class="section-intro" style="margin-top: 0;">
+          Для студии массажа я писала не только тексты для инстаграма, но и тексты сайта:
+          описания услуг, раздел о подарочных сертификатах, ответы на частые вопросы. Не просто «написать красиво», а разложить
+          информацию так, чтобы человек сразу понял, что ему подходит и что делать дальше.
+        </p>
+        <p class="section-intro">
+          Тексты нужно было адаптировать под структуру страниц и подобрать к ним визуал.
+          Отдельно участвовала в создании и запуске чат-бота: писала формулировки, которыми
+          бот разговаривает с клиентом, заполняла сведения разделов, снимала туториалы
+          о том, как пользоваться функциями бота, и делала к ним картинки и визуал.
+        </p>
+        <div class="links">
+          <p class="links-lead">Подробнее это можно увидеть на страницах ниже:</p>
+          <a href="https://s53.by/" target="_blank" rel="noopener">Сайт студии s53.by →</a>
+          <a href="https://t.me/smart_massage_minsk_bot" target="_blank" rel="noopener">Чат-бот в Telegram →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section wrap reveal">
+    <div class="rule">
+      <span class="label">06</span>
+      <h2>Что нужно в вакансии — и что я делала</h2>
+    </div>
+    <div class="fit">
+      <div class="fit-row">
+        <div class="fit-need"><strong>Съёмка и монтаж видео</strong>Reels, TikTok</div>
+        <div class="fit-have">Снимаю и монтирую ролики: студия массажа и частные мастера, кондитерские изделия, доставка еды, изделия ручной работы. Примеры — в разделах выше.</div>
+      </div>
+      <div class="fit-row">
+        <div class="fit-need"><strong>Создание визуалов</strong>Оформление постов, единый стиль</div>
+        <div class="fit-have">Оформляла посты и Stories в одном стиле, делала макеты акций и подарочных сертификатов, собирала ленту и актуальные.</div>
+      </div>
+      <div class="fit-row">
+        <div class="fit-need"><strong>Работа по контент-плану</strong>Реализация готовых идей</div>
+        <div class="fit-have">В своих проектах контент-план и тексты писала сама — поэтому по готовому плану работать проще: понимаю, зачем нужен каждый пост и что должно быть в кадре.</div>
+      </div>
+      <div class="fit-row">
+        <div class="fit-need"><strong>Согласование материалов</strong>Отправить руководителю, внести правки</div>
+        <div class="fit-have">Девять лет в банке приучили к регламентам и срокам: присылаю готовое заранее, правки принимаю спокойно и без споров.</div>
+      </div>
+      <div class="fit-row">
+        <div class="fit-need"><strong>Организация съёмок</strong>Оборудование, свет, локации</div>
+        <div class="fit-have">Организовывала съёмки: фотографы, локации, реквизит, подготовка материалов. С нормальным светом и техникой результат заметно другой — с удовольствием буду работать на них.</div>
+      </div>
+      <div class="fit-row">
+        <div class="fit-need"><strong>Формат работы</strong></div>
+        <div class="fit-have">Готова и удалённо, и в офисе — как удобнее команде.</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section wrap reveal">
+    <div class="rule">
+      <span class="label">07</span>
+      <h2>Как я работаю по готовому контент-плану</h2>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <span class="step-index">01</span>
+        <div>
+          <h3>Разбираю план</h3>
+          <p>Смотрю задачу: что за публикация, какая цель, что должно быть в кадре. Спорные места уточняю сразу, а не после съёмки.</p>
+        </div>
+      </div>
+      <div class="step">
+        <span class="step-index">02</span>
+        <div>
+          <h3>Готовлю съёмку</h3>
+          <p>Собираю реквизит, свет и локацию, продумываю планы, чтобы за одну смену снять материал сразу на несколько публикаций.</p>
+        </div>
+      </div>
+      <div class="step">
+        <span class="step-index">03</span>
+        <div>
+          <h3>Снимаю</h3>
+          <p>Снимаю под Reels и TikTok с запасом дублей и деталей — чтобы на монтаже был выбор, а не одна попытка.</p>
+        </div>
+      </div>
+      <div class="step">
+        <span class="step-index">04</span>
+        <div>
+          <h3>Монтирую и оформляю</h3>
+          <p>Сборка, ритм, титры и субтитры, обложка, оформление публикации под стиль бренда.</p>
+        </div>
+      </div>
+      <div class="step">
+        <span class="step-index">05</span>
+        <div>
+          <h3>Отдаю на согласование</h3>
+          <p>Присылаю готовое заранее, вношу правки, публикую и смотрю, как материал зашёл, — чтобы в следующий раз снять лучше.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section wrap reveal">
+    <div class="rule">
+      <span class="label">08</span>
+      <h2>Что умею</h2>
+    </div>
+    <div class="skills">
+      <div>
+        <h3>Видео</h3>
+        <ul>
+          <li>Съёмка видео для Reels, TikTok и Stories</li>
+          <li>Монтаж: ритм, склейка, титры и субтитры, музыка</li>
+          <li>Обложки и превью</li>
+          <li>Раскадровка по сценарию</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Визуал и посты</h3>
+        <ul>
+          <li>Оформление постов и Stories в едином стиле</li>
+          <li>Макеты акций и подарочных сертификатов</li>
+          <li>Ведение ленты и актуальных</li>
+          <li>Продуктовая и предметная съёмка</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Тексты</h3>
+        <ul>
+          <li>Тексты для сайта и посадочных страниц</li>
+          <li>Тексты постов и сценарии роликов</li>
+          <li>Формулировки для чат-бота</li>
+          <li>Контент-план и рубрики</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Организация</h3>
+        <ul>
+          <li>Съёмочный день: фотограф, локация, реквизит</li>
+          <li>Работа по срокам и согласованиям</li>
+          <li>Коммуникация с командой и подрядчиками</li>
+          <li>Работа с отзывами и обращениями клиентов</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section wrap reveal">
+    <div class="rule">
+      <span class="label">09</span>
+      <h2>Где посмотреть меня живьём</h2>
+    </div>
+    <div class="personal">
+      <p>
+        Мою жизнь, мои ролики и контент про меня саму можно посмотреть на личной странице —
+        там видно, как я снимаю, что мне нравится и какой у меня взгляд на кадр.
+      </p>
+      <p>
+        <a href="https://www.instagram.com/tatti_khlebko/" target="_blank" rel="noopener">instagram.com/tatti_khlebko</a>
+      </p>
+    </div>
+  </section>
+
+  <section class="section wrap reveal" id="resume">
+    <div class="rule">
+      <span class="label">10</span>
+      <h2>Резюме</h2>
+      <p class="rule-note">Полная версия — отдельным файлом</p>
+    </div>
+    <p class="section-intro">
+      Контент и соцсети шесть лет шли параллельно основной работе. Основная — банк: команда,
+      клиенты, документы, жёсткие сроки. Ниже честно и то, и другое.
+    </p>
+    <div class="timeline">
+      <div class="tl-row">
+        <div class="tl-when">сентябрь 2019 — август 2025</div>
+        <div class="tl-what">
+          <h3>SMM и контент-менеджер</h3>
+          <p class="tl-where">Студия ручного массажа «Studio53», Минск · частичная занятость</p>
+          <p>Участвовала в развитии проекта с момента запуска: вела каналы студии (Instagram, сайт, чат-бот) и отвечала за контент.</p>
+          <ul>
+            <li>Разрабатывала контент-план, писала тексты и готовила контент для Instagram: посты, Stories, Reels</li>
+            <li>Создавала фото- и видеоконтент, монтировала Reels, развивала визуальный стиль бренда</li>
+            <li>Координировала подготовку фото- и видеосъёмок: взаимодействовала с фотографами, подбирала площадки, организовывала процесс съёмок и контролировала подготовку материалов</li>
+            <li>Готовила макеты подарочных сертификатов в тематическом дизайне — 14 февраля, 8 марта, Новый год</li>
+            <li>Писала тексты для сайта s53.by и адаптировала их под структуру страниц, подбирала визуальные материалы; участвовала в запуске сайта и чат-бота</li>
+            <li>Анализировала эффективность контента, участвовала в продвижении бренда, организации рекламных активностей и взаимодействии с блогерами</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="tl-row">
+        <div class="tl-when">январь 2016 — август 2025</div>
+        <div class="tl-what">
+          <h3>Ведущий специалист по оказанию розничных банковских услуг · ответственная за организацию работы подразделения</h3>
+          <p class="tl-where">ОАО «АСБ Беларусбанк», Минск · полная занятость</p>
+          <p>Карьерный рост от специалиста по кассовому обслуживанию до ведущего специалиста и ответственной за организацию работы подразделения. Подразделение нового формата: команда из 7 сотрудников и клиентский поток до 400 человек ежедневно.</p>
+          <h4>Работа с клиентами</h4>
+          <ul>
+            <li>Проводила до 80 консультаций ежедневно, выявляя потребности клиентов и подбирая финансовые решения</li>
+            <li>Выстраивала долгосрочные отношения с клиентами, работала с возражениями и сопровождала сложные переговоры</li>
+            <li>Самостоятельно урегулировала конфликтные ситуации, выступая связующим звеном между клиентами, подразделением и руководством</li>
+          </ul>
+          <h4>Координация команды и обучение</h4>
+          <ul>
+            <li>Координировала ежедневную работу подразделения и команды из 7 сотрудников</li>
+            <li>Обучала новых специалистов, сопровождала адаптацию и помогала быстрее выйти на самостоятельную работу</li>
+            <li>Консультировала сотрудников по операционным вопросам и контролировала соблюдение внутренних процедур и сроков</li>
+            <li>Взаимодействовала с головным офисом по вопросам организации работы и планирования графиков</li>
+          </ul>
+          <h4>Документооборот и контроль</h4>
+          <ul>
+            <li>Проверяла корректность оформления 1 500–3 000 внутренних и договорных документов ежемесячно</li>
+            <li>Контролировала соблюдение регламентов и сроков оформления документов и отчётности, выявляла ошибки и организовывала их исправление на всех этапах</li>
+            <li>Работала с персональными данными и конфиденциальной информацией</li>
+          </ul>
+          <h4>Достижения</h4>
+          <ul>
+            <li>Благодарность банка (2022) за активную и плодотворную работу и личный вклад в результаты</li>
+            <li>Победитель корпоративного конкурса «Человек труда» (2017)</li>
+            <li>Подразделение регулярно входило в число лидеров по выполнению ключевых показателей</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="tl-row">
+        <div class="tl-when">июль 2013 — июль 2015</div>
+        <div class="tl-what">
+          <h3>Бухгалтер по заработной плате</h3>
+          <p class="tl-where">Управление по образованию администрации Московского района г. Минска</p>
+          <ul>
+            <li>Начисляла заработную плату 300+ сотрудникам нескольких образовательных учреждений</li>
+            <li>Вела учёт рабочего времени, отпусков и больничных, контролировала корректность кадровой информации</li>
+            <li>Готовила налоговую и статистическую отчётность, обеспечивая точность расчётов и соблюдение сроков</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="tl-row">
+        <div class="tl-when">недавние интересные обучения</div>
+        <div class="tl-what">
+          <h3>Курс IT Recruitment &amp; HR — Школа Ширкиной</h3>
+          <p class="tl-where">Сентябрь — ноябрь 2025</p>
+          <ul>
+            <li>Full-cycle recruitment: анализ вакансий, intake meeting, поиск кандидатов, интервью, подготовка offer и сопровождение onboarding</li>
+            <li>Поиск кандидатов через LinkedIn, GitHub, Boolean Search и X-Ray Search</li>
+            <li>Screening-интервью, интервью по компетенциям, анализ кандидатов</li>
+            <li>Разработка Job Description, recruiter messages, offer и rejection letters</li>
+            <li>HR-процессы: onboarding и offboarding сотрудников, HR-документооборот, подготовка HR-документов, взаимодействие между HR, сотрудниками и бизнесом</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="tl-row">
+        <div class="tl-when">образование</div>
+        <div class="tl-what">
+          <h3>Белорусский государственный экономический университет, 2013–2017</h3>
+          <p class="tl-where">Бухгалтерский учёт, анализ и контроль в коммерческих и некоммерческих организациях</p>
+          <ul>
+            <li>Колледж бизнеса и права, 2010–2013 — бухгалтерский учёт, анализ и аудит</li>
+            <li>Английский — A2+, с февраля 2026 занимаюсь в SwiftEnglishSchool</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section wrap reveal" id="contact">
+    <div class="rule">
+      <span class="label">11</span>
+      <h2>Связаться</h2>
+    </div>
+    <div class="contact">
+      <div class="contact-cell">
+        <span class="label">Телефон</span>
+        <a href="tel:+995597996042">+995 597 996 042</a><br>
+        <a href="tel:+375292741714">+375 29 274-17-14</a>
+        <p style="font-size:.82rem;color:var(--muted);margin-top:.3rem;">WhatsApp, Telegram</p>
+      </div>
+      <div class="contact-cell">
+        <span class="label">Почта</span>
+        <a href="mailto:tanyahlebko@gmail.com">tanyahlebko@gmail.com</a>
+      </div>
+      <div class="contact-cell">
+        <span class="label">Личная страница</span>
+        <a href="https://www.instagram.com/tatti_khlebko/" target="_blank" rel="noopener">@tatti_khlebko</a>
+      </div>
+      <div class="contact-cell">
+        <span class="label">Формат</span>
+        <span>Удалённо или в офисе</span>
+        <p style="font-size:.82rem;color:var(--muted);margin-top:.3rem;">Минск · Батуми</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    Татьяна Хлебко · портфолио SMM и контент-мейкера. Все ролики сняты и смонтированы мной.
+  </div>
+</footer>
+
+<script>
+  (function () {
+    var items = document.querySelectorAll('.reveal');
+    if (!('IntersectionObserver' in window) || window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      items.forEach(function (el) { el.classList.add('is-in'); });
+    } else {
+      var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-in');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { rootMargin: '0px 0px -8% 0px', threshold: 0.05 });
+      items.forEach(function (el) { observer.observe(el); });
+    }
+
+    document.querySelectorAll('.clip video').forEach(function (video) {
+      video.addEventListener('play', function () {
+        document.querySelectorAll('.clip video').forEach(function (other) {
+          if (other !== video) { other.pause(); }
+        });
+      });
+    });
+  })();
+</script>
